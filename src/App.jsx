@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const App = () => {
   const [isPopupVisible, setIsPopupVisible] = useState(false);
-  const [popupTitle, setPopupTitle] = useState('');
-  const [popupMessage, setPopupMessage] = useState('');
+  const [popupTitle, setPopupTitle] = useState("");
+  const [popupMessage, setPopupMessage] = useState("");
 
   const togglePopup = () => {
     setIsPopupVisible((prev) => !prev);
     if (isPopupVisible) {
-      setPopupTitle('');
-      setPopupMessage('');
+      setPopupTitle("");
+      setPopupMessage("");
     }
   };
 
@@ -27,7 +27,7 @@ const App = () => {
         onClick={togglePopup}
         className="bg-blue-500 text-white px-4 py-2 rounded"
       >
-        {isPopupVisible ? 'Hide Popup' : 'Show Popup'}
+        {isPopupVisible ? "Hide Popup" : "Show Popup"}
       </button>
 
       {isPopupVisible && (
